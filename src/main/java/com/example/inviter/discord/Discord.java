@@ -20,7 +20,7 @@ public class Discord {
 
     public Discord() throws LoginException {
 
-        jda = JDABuilder.createDefault("OTQzMDkyODIxODY5NTkyNjM3.YguBog.l3aLKrilk3EFv4BqehXZzKy4BNs").build();
+        jda = JDABuilder.createDefault(System.getenv("token")).build();
         jda.getPresence().setActivity(Activity.playing("Inviting folks"));
         codes = new ArrayList<>();
         CodeGenerator.fillList(codes, 50);
